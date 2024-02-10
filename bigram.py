@@ -27,7 +27,8 @@ joined = firstWordsCount.join(bigramCounts)
 bigramFreq = joined.map(lambda x: ((x[0], x[1][1][0]), x[1][1][1] / x[1][0]))
 
 # Save the result to a text file
-bigramFreq.coalesce(1, shuffle=True).saveAsTextFile(sys.argv[2])
+bigramFreq.coalesce(1, shuffle=True).saveAsTextFile(sys.argv[2] + "_freq")
+bigramCounts.coalesce(1, shuffle=True).saveAsTextFile(sys.argv[2] + "_count")
 
 sc.stop()
 

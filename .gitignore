@@ -2,3 +2,5 @@ output_bigram
 output
 output_wordcount
 wiki.txt
+output_bigram_freq
+output_bigram_count
